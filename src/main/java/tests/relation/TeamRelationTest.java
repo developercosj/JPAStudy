@@ -1,18 +1,17 @@
-package hellojpa;
+package tests.relation;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-//@Table(name="member")
-public class Member {
-
+public class TeamRelationTest {
 
     @Id
+    @GeneratedValue
+    @Column(name = "team_id")
     private Long id;
-    //@Column(name = "name")
     private String name;
 
     public Long getId() {
