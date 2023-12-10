@@ -1,6 +1,6 @@
 package org.example;
 
-import hellojpa.Member;
+import tests.relation.RelationTest;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,12 +10,21 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+
+        RelationTest relationTest = new RelationTest();
+        relationTest.relationTest();
+
+         /*  EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
 
         EntityTransaction tx = em.getTransaction();
         tx.begin();
-        try {
+     try {
+
+            Member member = new Member();
+            member.setId(1L);
+            member.setName("A");
+            member.setRoleType(RoleType.USER);
             // insert
             //Member member = new Member();
             //member.setId(1L);
@@ -50,6 +59,7 @@ public class Main {
         emf.close();
 
 
+    */
 
     }
 }
