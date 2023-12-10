@@ -1,9 +1,6 @@
 package tests.relation;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class MemberRelationTest {
@@ -16,8 +13,13 @@ public class MemberRelationTest {
     @Column(name = "username")
     private String username;
 
-    @Column(name = "team_id")
-    private Long teamId;
+    //@Column(name = "team_id")
+    //private Long teamId;
+
+
+    @ManyToOne
+    @JoinColumn(name = "team_id")
+    private TeamRelationTest team;
 
 
     public Long getId() {
@@ -36,12 +38,12 @@ public class MemberRelationTest {
         this.username = username;
     }
 
-    public Long getTeamId() {
-        return teamId;
+    public TeamRelationTest getTeam() {
+        return team;
     }
 
-    public void setTeamId(Long teamId) {
-        this.teamId = teamId;
+    public void setTeam(TeamRelationTest team) {
+        this.team = team;
     }
 
 

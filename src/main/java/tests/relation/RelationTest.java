@@ -20,15 +20,18 @@ public class RelationTest {
                 em.persist(team);
             MemberRelationTest member = new MemberRelationTest();
                 member.setUsername("member1");
-                member.setTeamId(team.getId());
+                member.setTeam(team);
                 em.persist(member);
+
+                //DB 를 commit() 하기 전에 SQL DB에 실행
+                em.flush();
+                // 영속성컨텍스트를 지우기 때문에 아래 find() 는 DB 에서 가지고 올 수 있도록 함
+                em.clear();
 
             MemberRelationTest findMember = em.find(MemberRelationTest.class, member.getId());
 
-            Long findTeamId = findMember.getTeamId();
-            TeamRelationTest findTeam = em.find(TeamRelationTest.class, findTeamId);
-
-
+            TeamRelationTest findTeam = findMember.getTeam();
+            System.out.println("findTeam = " + findTeam.getName());
             tx.commit();
 
 
