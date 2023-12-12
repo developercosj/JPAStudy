@@ -1,6 +1,8 @@
 package org.example.domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Member {
@@ -12,6 +14,13 @@ public class Member {
     private String city;
     private String street;
     private String zipcode;
+
+
+    // 관례상 new ArrayList<>() 선언해줌
+    // 실무에서 Member 에 Orders 를 넣는것은 좋지 않음 분리해야 함 (당연히)
+    //@OneToMany(mappedBy = "member")
+    //private List<Order> orders = new ArrayList<>();
+
 
     public Long getId() {
         return id;
