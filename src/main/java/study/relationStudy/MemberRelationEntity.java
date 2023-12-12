@@ -1,4 +1,4 @@
-package tests.relation;
+package study.relationStudy;
 
 import javax.persistence.*;
 
