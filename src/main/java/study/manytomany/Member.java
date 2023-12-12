@@ -14,11 +14,8 @@ public class Member {
     @Column(name="user_name")
     private String name;
 
-
-    // 기본 객체의 PK가 FK 로 설정된 테이블이 생성됨
-    @ManyToMany
-    @JoinTable(name = "member_product")
-    private List<Product> products = new ArrayList<>();
+    @OneToMany(mappedBy = "member")
+    private List<MemberProduct> memberProducts = new ArrayList<>();
 
 
     public Long getId() {

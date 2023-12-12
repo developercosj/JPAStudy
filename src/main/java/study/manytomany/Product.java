@@ -1,9 +1,6 @@
 package study.manytomany;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,13 +8,13 @@ import java.util.List;
 public class Product {
 
     @Id @GeneratedValue
+    @Column(name="product_id")
     private Long id;
 
     private String name;
 
-    @ManyToMany(mappedBy = "products")
-
-    private List<Member> members = new ArrayList<>();
+    @OneToMany(mappedBy = "products")
+    private List<MemberProduct> memberProducts = new ArrayList<>();
 
     public Long getId() {
         return id;
