@@ -1,4 +1,4 @@
-package study.oneToManyStudy;
+package study.onetomany;
 
 import javax.persistence.*;
 

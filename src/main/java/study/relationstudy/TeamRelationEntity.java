@@ -1,4 +1,4 @@
-package study.relationStudy;
+package study.relationstudy;
 
 
 

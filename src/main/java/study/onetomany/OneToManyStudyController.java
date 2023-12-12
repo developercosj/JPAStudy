@@ -1,7 +1,4 @@
-package study.oneToManyStudy;
-
-import org.example.domain.Order;
-import org.example.domain.OrderItem;
+package study.onetomany;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

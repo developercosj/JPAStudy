@@ -1,4 +1,4 @@
-package study.relationStudy;
+package study.relationstudy;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

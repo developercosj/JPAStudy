@@ -1,6 +1,6 @@
 package org.example;
 
-import study.relationStudy.RelationStudyController;
+import study.relationstudy.RelationStudyController;
 
 public class Main {
     public static void main(String[] args) {
