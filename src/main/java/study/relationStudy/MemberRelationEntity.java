@@ -3,7 +3,7 @@ package study.relationStudy;
 import javax.persistence.*;
 
 @Entity
-public class MemberRelationTest {
+public class MemberRelationEntity {
 
     @Id
     @GeneratedValue
@@ -19,7 +19,7 @@ public class MemberRelationTest {
 
     @ManyToOne
     @JoinColumn(name = "team_id")
-    private TeamRelationTest team;
+    private TeamRelationEntity team;
 
 
     public Long getId() {
@@ -38,11 +38,11 @@ public class MemberRelationTest {
         this.username = username;
     }
 
-    public TeamRelationTest getTeam() {
+    public TeamRelationEntity getTeam() {
         return team;
     }
 
-    public void setTeam(TeamRelationTest team) {
+    public void setTeam(TeamRelationEntity team) {
         this.team = team;
     }
 
