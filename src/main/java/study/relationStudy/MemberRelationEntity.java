@@ -46,6 +46,11 @@ public class MemberRelationEntity {
         this.team = team;
     }
 
+    public void changeTeam(TeamRelationEntity team) {
+        this.team = team;
+        team.getMembers().add(this);
+    }
+
 
 
 }
