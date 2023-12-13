@@ -16,7 +16,7 @@ public class Locker {
 
 
     // 읽기 전용
-    @OneToOne(mappedBy = "locker_id")
+    @OneToOne(mappedBy = "locker")
     private Member member;
 
 
