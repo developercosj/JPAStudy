@@ -2,7 +2,7 @@ package study.relationstudy;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class MemberRelationEntity {
 
     @Id
