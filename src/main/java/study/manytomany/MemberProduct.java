@@ -3,7 +3,7 @@ package study.manytomany;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class MemberProduct {
 
     @Id @GeneratedValue

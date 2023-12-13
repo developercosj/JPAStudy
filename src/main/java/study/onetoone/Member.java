@@ -2,7 +2,7 @@ package study.onetoone;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Member {
 
     @Id
