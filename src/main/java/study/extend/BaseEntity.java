@@ -5,7 +5,7 @@ import net.bytebuddy.asm.Advice;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
-@MappedSuperclass
+//@MappedSuperclass
 public class BaseEntity {
 
 
