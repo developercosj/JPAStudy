@@ -1,14 +1,12 @@
 package org.example;
 
-import study.cascade.CascadeController;
-import study.extend.ExtendController;
-import study.relationstudy.RelationStudyController;
+import study.Embedded.EmbeddedController;
 
 public class Main {
     public static void main(String[] args) {
 
-        CascadeController cascadeController = new CascadeController();
-        cascadeController.cascade();
+        EmbeddedController cascadeController = new EmbeddedController();
+        cascadeController.embeddedMethod();
          /*  EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
 
