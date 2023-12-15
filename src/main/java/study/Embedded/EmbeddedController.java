@@ -34,6 +34,7 @@ public class EmbeddedController {
             em.persist(member2);
 
             // Address 객체를 복사시 member 만 바꿨으나 member2에도 영향을 줌
+            // 불변객체를 만들면 아래처럼 수정이 불가하게 되서 안정성이 생김
             //member.getHomeAddress().setCity("newCity");
 
 
