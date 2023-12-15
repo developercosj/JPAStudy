@@ -2,7 +2,7 @@ package study.cascade;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Child {
 
 

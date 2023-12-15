@@ -26,15 +26,20 @@ public class CascadeController {
             parent.addChild(child1);
             parent.addChild(child2);
 
+            // cascade 를 설정하면 Parent 를 상속한(cascade = CascadeType.ALL) Child 또한 영속성 컨텍스트에서 관리됨
             em.persist(parent);
-            em.persist(child1);
-            em.persist(child2);
+            em.flush();
+            em.clear();
+
+            Parent findParent = em.find(Parent.class, parent.getId());
+            // orphanRemoval 이 동작된다.
+            // orphanRemoval = true 이 없으면 단지 영속성 컨텍스트에서 없어지는 것이지만 true 를 하면
+            // delete from Child 쿼리가 동작
+            findParent.getChildList().remove(0);
 
 
 
-
-
-
+            tx.commit();
         } catch(Exception e) {
             tx.rollback();
         } finally {
