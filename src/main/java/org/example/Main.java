@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         EmbeddedController cascadeController = new EmbeddedController();
-        cascadeController.embeddedMethod();
+        cascadeController.testValueTypeCollection();
          /*  EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
 
