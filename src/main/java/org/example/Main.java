@@ -1,12 +1,13 @@
 package org.example;
 
+import jpql.JpaController;
 import study.Embedded.EmbeddedController;
 
 public class Main {
     public static void main(String[] args) {
 
-        EmbeddedController cascadeController = new EmbeddedController();
-        cascadeController.testValueTypeCollection();
+        JpaController jpaController = new JpaController();
+        jpaController.testJpql();
          /*  EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
 
